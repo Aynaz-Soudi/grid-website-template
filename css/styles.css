@@ -1,0 +1,27 @@
+/** Fonts **/
+@font-face {
+    font-family: "vazir";
+    src: url("../fonts/vazir/Vazir-Medium-FD-WOL.woff") format("woff2"),
+        url("../fonts/vazir/Vazir-Medium-FD-WOL.woff") format("woff"),
+        url("../fonts/vazir/Vazir-Medium-FD-WOL.ttf") format("truetype");
+}
+
+:root {
+    --clr-primary-1: #9381ff;
+    --clr-primary-2: #b8b8ff;
+    --clr-primary-3: #f8f7ff;
+    --clr-primary-4: #ffeedd;
+    --clr-primary-5: #ffd8be;
+    --clr-grey-1: #102A42;
+    --clr-grey-2: #617D98;
+    --clr-grey-3: #F1F5F8;
+    --clr-white: #FFF;
+    --ff-primary: "vazir", sans-serif;
+    --transition: all 0.3 linear;
+    --radius: 0.5rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px  rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+}
+
+/** Global Styles **/
