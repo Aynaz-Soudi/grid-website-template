@@ -7,11 +7,11 @@
 }
 
 :root {
-    --clr-primary-1: #abc4ff;
-    --clr-primary-2: #b6ccfe;
-    --clr-primary-3: #c1d3fe;
-    --clr-primary-4: #ccdbfd;
-    --clr-primary-5: #d7e3fc;
+    --clr-primary-1: #cc5803;
+    --clr-primary-2: #e2711d;
+    --clr-primary-3: #ff9505;
+    --clr-primary-4: #ffb627;
+    --clr-primary-5: #fceacd;
     --clr-grey-1: #102A42;
     --clr-grey-2: #617D98;
     --clr-grey-3: #F1F5F8;
@@ -222,4 +222,22 @@ p {
 
 .sidebar-links a:hover {
      color: var(--clr-primary-4);
+}
+
+.sidebar-icons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    column-gap: 2rem;
+    margin-top: 3rem;
+}
+
+.sidebar-icon {
+    font-size: 1.5rem;
+    color: var(--clr-grey-1);
+    transition: var(--transition);
+}
+
+.sidebar-icon:hover {
+    color: var(--clr-primary-4);
 }
