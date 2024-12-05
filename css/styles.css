@@ -10,7 +10,7 @@
     --clr-primary-1: #cc5803;
     --clr-primary-2: #e2711d;
     --clr-primary-3: #ff9505;
-    --clr-primary-4: #ffb627;
+    --clr-primary-4: #ffd98e;
     --clr-primary-5: #fceacd;
     --clr-grey-1: #102A42;
     --clr-grey-2: #617D98;
@@ -452,6 +452,241 @@ p {
     max-width: 30rem;
 }
 
+/** Skills **/
+.skills {
+    background: var(--clr-primary-4);
+}
+
+.skills h3 {
+    color: var(--clr-primary-1);
+    margin: 1.5rem 0;
+}
+
+.skill {
+    margin-bottom: 1.5rem;
+}
+
+.skill p {
+    color: var(--clr-primary-1);
+    margin-bottom: 1.5rem;
+}
+
+.skill-container {
+    background: var(--clr-white);
+    height: 1rem;
+    width: 100%;
+    border-radius: var(--radius);
+    position: relative;
+}
+
+.skill-value {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--clr-primary-2);
+    height: 100%;
+    border-radius: var(--radius);
+}
+
+.value-50 {
+    width: 50%;
+}
+
+.value-70 {
+    width: 70%;
+}
+
+.value-80 {
+    width: 80%;
+}
+
+.skill-text {
+    position: absolute;
+    top: -2rem;
+    transform: translateX(-50%);
+}
+
+.skill-text-50 {
+    left: 50%;
+}
+
+.skill-text-70 {
+    left: 70%;
+}
+
+.skill-text-80 {
+    left: 80%;
+}
+
+/** Timeline **/
+.timeline-center {
+    width: 80vw;
+    max-width: 40rem;
+}
+
+.timeline p {
+    margin-bottom: 0;
+}
+
+.timeline-item {
+    border-top: 2px dashed var(--clr-primary-2);
+    padding: 4rem 2rem;
+    margin: 0;  
+    position: relative;
+}
+
+.timeline-item:nth-child(even){
+    border-left: 2px dashed var(--clr-primary-2);
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    margin-right: 2rem;
+    padding-right: 0;
+}
+
+.timeline-item:nth-child(odd){
+    border-right: 2px dashed var(--clr-primary-2);
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    margin-left: 2rem;
+    padding-left: 0;
+}
+
+.timeline-item:first-child {
+    border-top: 0;
+    border-top-right-radius: 0;
+}
+
+.timeline-item:last-child {
+    border-bottom-left-radius: 0;
+}
+
+.number {
+    position: absolute;
+    top: 50%;
+    background: var(--clr-primary-2);
+    width: 2rem;
+    height: 2rem;
+    color: var(--clr-white);
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.timeline-item:nth-child(even) .number {
+    left: 0;
+}
+
+.timeline-item:nth-child(odd) .number {
+    right: 0;
+    transform: translateX(50%);
+}
+
+/** Blog **/
+.blog {
+    background: var(--clr-grey-3);
+}
+
+.card {
+    height: 27rem;
+    perspective: 1500px;
+    position: relative;
+}
+
+.card-side {
+    position: absolute;
+    transition: all 1.5s linear;
+    backface-visibility: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius);
+}
+
+.card-front {
+    background: var(--clr-white)
+}
+
+.card-back {
+    background: var(--clr-primary-5);
+    transform: rotateY(180deg);
+    display: grid;
+    place-items: center;
+}
+
+.card:hover .card-front {
+    transform: rotateY(-180deg);
+}
+
+.card:hover .card-back {
+    transform: rotateY(0);
+}
+
+.card-front img {
+    height: 13rem;
+    object-fit: cover;
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+}
+
+.card-footer img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.card-info {
+    padding: 1rem 1.5rem;
+}
+
+.card-footer {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+
+.card-footer p{
+    margin-bottom: 0;
+    justify-self: end;
+    color: var(--clr-primary-2);
+    font-size: 0.85rem;
+}
+
+.blog-center {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 3rem 1rem;
+}
+
+/** Footer **/
+.footer {
+    padding-bottom: 2rem;
+    background: #222;
+    display: grid;
+    place-items: center;
+}
+
+.footer .social-icons {
+    margin-bottom: 2rem;
+}
+
+.footer .social-icon {
+    color: var(--clr-primary-2);
+}
+
+.footer .social-icon:hover {
+    color: var(--clr-primary-5);
+}
+
+.footer p {
+    font-size: 1.25rem;
+}
+
+
+
+
+
 
 /** Media Queries **/
 @media screen and (min-width: 676px) {
@@ -494,6 +729,11 @@ p {
         display: grid;
         grid-template-columns: auto 1fr;
         align-items: center;
+    }
+    .skills-center {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
     }
 }
 
